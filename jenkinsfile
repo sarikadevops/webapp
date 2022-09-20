@@ -7,7 +7,7 @@ agent{
      stages{
             stage('mvn'){
                   steps{
-                        sh 'mvn clean package'
+                        sh 'mvn install'
                        }
                           }
              stage('deploy'){
