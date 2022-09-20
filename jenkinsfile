@@ -12,7 +12,6 @@ agent{
                           }
              stage('deploy'){
               steps{
-                 sh 'docker run -d -p 4000:8080 --name mytomcat tomcat:9'
                  sh 'docker build -t mytomcat .'
                  sh 'docker run -it -d -p 4000:8080 mytomcat'
                  }
