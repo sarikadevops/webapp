@@ -5,9 +5,16 @@ agent{
       }
      }
      stages{
-            stage('hello'){
+            stage('mvn'){
                   steps{
-                        echo 'hello world'
+                        sh 'mvn clean package'
                        }
                           }
-        } 
+             stage('deploy'){
+              steps{
+                 sh 'docker build -t mytomcat .'
+                 sh 'docker run -it -d -p 4000:8080 mytomcat'
+                 }
+                 }
+          }
+     }
