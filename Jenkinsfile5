@@ -15,9 +15,11 @@ agent{
                git 'https://github.com/sarikadevops/webapp.git'
                }
                }
-         triggers {   
+         stage('schedule'){
+         steps{
+              triggers {   
               cron('H/2 * * * *')
          }
        }
      }
-
+}
