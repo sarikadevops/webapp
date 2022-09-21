@@ -12,9 +12,9 @@ agent{
                           }
               stage('deploy'){
                   steps{
-                       sh 'docker run -d --name mygit2.0 ubuntu:18.04'
-                       sh 'docker build -t mygit2.0 .'
-                       sh 'docker run -itd mygit2.0'
+                       sh 'docker run -d --name mygit3.0 ubuntu:18.04'
+                       sh 'docker build -t mygit3.0 .'
+                       sh 'docker run -itd mygit3.0'
                        }
                      }
             }
