@@ -16,8 +16,7 @@ agent{
                        sh 'docker build -t mygit4.0 .'
                        sh 'docker run -itd mygit4.0'
                        sh 'docker attach mygit4.0'
-                       sh 'apt-get update'
-                       sh 'apt-get install git -y'                       }
+                       }
                      }
             }
                  
