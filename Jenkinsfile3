@@ -13,8 +13,8 @@ agent{
               stage('deploy'){
                   steps{
                        sh 'docker run -d --name sarugit1.0 ubuntu:18.04'
-                       sh 'docker build -t sarikagit1.0 .'
-                       sh 'docker run -itd sarikagit1.0'
+                       sh 'docker build -t sarugit1.0 .'
+                       sh 'docker run -itd sarugit1.0'
                        sh 'apt-get update'
                        sh 'apt-get install git -y'
                        sh 'git --version'
