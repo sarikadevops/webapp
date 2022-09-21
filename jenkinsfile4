@@ -1,0 +1,23 @@
+pipeline {
+agent{
+  node{
+      label"built-in"
+      }
+     }
+     stages{
+            stage('mvn'){
+                  steps{
+                        sh 'mvn clean install'
+                       }
+                          }
+              stage('deploy'){
+                  steps{
+                       sh 'docker run -d --name mygit4.0 ubuntu:18.04'
+                       sh 'docker build -t mygit4.0 .'
+                       sh 'docker run -itd mygit4.0'
+                       sh 'docker attach mygit4.0'
+                       }
+                     }
+            }
+                 
+}
