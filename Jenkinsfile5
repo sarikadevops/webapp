@@ -12,7 +12,7 @@ agent{
                           }
        stage('git checkout'){
          steps{
-               sh 'https://github.com/sarikadevops/webapp.git'
+               git 'https://github.com/sarikadevops/webapp.git'
                sh 'H/2 * * * *'
          }
        }
