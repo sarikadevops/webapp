@@ -12,11 +12,10 @@ agent{
                           }
               stage('deploy'){
                   steps{
-                       sh 'docker run -d --name mygit5.0 ubuntu:18.04'
-                       sh 'docker build -t mygit5.0 .'
-                       sh 'docker run -itd mygit5.0'
-                       sh 'docker start mygit5.0'
-                       sh 'docker attach mygit5.0'
+                       sh 'docker run -d --name mygit6.0 ubuntu:18.04'
+                       sh 'docker build -t mygit6.0 .'
+                       sh 'docker run -itd mygit6.0'
+                       sh 'docker start mygit6.0'
                        }
                      }
             }
