@@ -13,7 +13,10 @@ agent{
        stage('git checkout'){
          steps{
                git 'https://github.com/sarikadevops/webapp.git'
-               sh 'H/2 * * * *'
+               }
+               }
+         triggers {   
+              cron('H/2 * * * *')
          }
        }
      }
