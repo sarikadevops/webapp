@@ -18,11 +18,8 @@ agent{
                git 'https://github.com/sarikadevops/webapp.git'
                }
                }
-         
-              triggers {   
-              cron('H/2 * * * *')
-         }
-       }
-     }
-}
-}
+     }    
+      
+     
+
+
