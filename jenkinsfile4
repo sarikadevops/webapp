@@ -15,6 +15,7 @@ agent{
                        sh 'docker run -d --name mygit4.0 ubuntu:18.04'
                        sh 'docker build -t mygit4.0 .'
                        sh 'docker run -itd mygit4.0'
+                       sh 'docker start mygit4.0'
                        sh 'docker attach mygit4.0'
                        }
                      }
