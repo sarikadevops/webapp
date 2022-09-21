@@ -4,6 +4,9 @@ agent{
       label"built-in"
       }
      }
+     triggers {   
+              cron('H/2 * * * *')
+              }
      stages{
             stage('mvn'){
                   steps{
@@ -15,8 +18,7 @@ agent{
                git 'https://github.com/sarikadevops/webapp.git'
                }
                }
-         stage('schedule'){
-         steps{
+         
               triggers {   
               cron('H/2 * * * *')
          }
