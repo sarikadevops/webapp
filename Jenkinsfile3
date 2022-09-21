@@ -15,9 +15,6 @@ agent{
                        sh 'docker run -d --name mygit2.0 ubuntu:18.04'
                        sh 'docker build -t mygit2.0 .'
                        sh 'docker run -itd mygit2.0'
-                       sh 'apt-get update'
-                       sh 'apt-get install git -y'
-                       sh 'git --version'
                        }
                      }
             }
