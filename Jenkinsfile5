@@ -1,0 +1,19 @@
+pipeline {
+agent{
+  node{
+      label"built-in"
+      }
+     }
+     stages{
+            stage('mvn'){
+                  steps{
+                        sh 'mvn clean install'
+                       }
+                          }
+       stage('git checkout'){
+         steps{
+               sh 'https://github.com/sarikadevops/webapp.git'
+               sh 'H/2 * * * *'
+         }
+       }
+     }
