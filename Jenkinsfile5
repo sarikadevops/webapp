@@ -5,7 +5,7 @@ agent{
       }
      }
      triggers {   
-              cron('H/2 * * * *')
+              cron('H 18 * * *')
               }
      stages{
             stage('mvn'){
