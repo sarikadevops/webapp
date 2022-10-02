@@ -18,7 +18,7 @@ agent{
              stage('deploy'){
               steps{
                  sh 'docker build -t mytomcat .'
-                 sh 'docker run -it -d -p 4070:8080 mytomcat'
+                 sh 'docker run -it -d -p 4080:8080 mytomcat'
                  }
                  }
                  stage('build docker image'){
