@@ -1,7 +1,7 @@
 pipeline {
 agent{
   node{
-      label"dev1"
+      label"built-in"
       }
      }
      stages{
