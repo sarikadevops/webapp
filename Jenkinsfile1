@@ -1,0 +1,29 @@
+pipeline {
+agent{
+  node{
+      label"built-in"
+      }
+     }
+     stages{
+           stage('git checkout'){
+         steps{
+               git 'https://github.com/sarikadevops/webapp.git'
+               }
+               }
+            stage('mvn'){
+                  steps{
+                        sh 'mvn clean install'
+                       }
+                          }
+             stage('deploy'){
+              steps{
+                 sh 'docker build -t mytomcat .'
+                 sh 'docker run -it -d -p 4060:8080 mytomcat'
+                 }
+                 }
+             stage('push image'){
+                    steps{
+                       sh 'docker push sarikadevops/mytomcat'          
+                    }
+                  }
+}
