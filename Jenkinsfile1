@@ -25,6 +25,7 @@ agent{
                   steps{
                       sh 'docker build -t sarikadevops/mytomcat .'
                        }
+                       }
              stage('push image'){
                     steps{
                        sh 'docker push sarikadevops/mytomcat'          
