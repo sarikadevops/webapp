@@ -2,6 +2,7 @@ pipeline {
 agent{
   node{
       label"dev1"
+      customWorkspace '/mnt/jenkins'
       }
      }
      stages{
