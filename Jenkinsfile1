@@ -21,6 +21,10 @@ agent{
                  sh 'docker run -it -d -p 4070:8080 mytomcat'
                  }
                  }
+                 stage('build docker image'){
+                  steps{
+                      sh 'docker build -t sarikadevops/mytomcat .'
+                       }
              stage('push image'){
                     steps{
                        sh 'docker push sarikadevops/mytomcat'          
