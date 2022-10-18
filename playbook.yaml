@@ -1,4 +1,4 @@
-hosts: devlinux
+hosts: qalinux
   user: ansible
   become: yes
 
