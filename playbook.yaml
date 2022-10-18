@@ -1,5 +1,6 @@
 hosts: qalinux
   user: ansible
+  connection: ssh
   become: yes
 
   vars:
