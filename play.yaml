@@ -7,4 +7,4 @@
   
   tasks:
     - name: create dir
-      command: mkdir test1
+      command: mkdir test2
