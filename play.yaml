@@ -1,4 +1,4 @@
-hosts: qalinux
+- hosts: qalinux
   user: ansible
   become: yes
   connection: ssh
