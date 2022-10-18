@@ -1,7 +1,7 @@
 hosts: qalinux
-  user: ansible
-  connection: ssh
-  become: yes
+user: ansible
+connection: ssh
+become: yes
 
   vars:
     pkgname: httpd
