@@ -1,0 +1,10 @@
+hosts: qalinux
+  user: ansible
+  become: yes
+  connection: ssh
+  gather_facts: yes
+
+  
+  tasks:
+    - name: create dir
+      command: mkdir newtest
