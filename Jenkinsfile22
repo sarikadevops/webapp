@@ -21,7 +21,7 @@ agent{
   - test
 
 include:
-  - template: Security/SAST.gitlab-ci.yml
+  - template: Security/SAST.github-ci.yml
 
 build:
   image: maven:3.6-jdk-8-slim
