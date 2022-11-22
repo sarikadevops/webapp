@@ -16,4 +16,5 @@ agent{
                         sh 'mvn clean install'
                        }
                           }
-            
+            }
+}
