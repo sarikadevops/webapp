@@ -16,32 +16,4 @@ agent{
                         sh 'mvn clean install'
                        }
                           }
-             stage('deploy')
-                     - build
-                      - test
-
-              include:
-                     - template: Security/SAST.github-ci.yml
-
-              build:
-              image: maven:3.6-jdk-8-slim
-              stage: build
-              script:
-              - mvn package -Dmaven.repo.local=./.m2/repository
-              artifacts:
-               paths:
-               - .m2/
-                - target/
-
-spotbugs-sast:
-  dependencies:
-    - build
-  variables:
-    MAVEN_REPO_PATH: $CI_PROJECT_DIR/.m2/repository
-    COMPILE: "false"
-  artifacts:
-    reports:
-      sast: gl-sast-report.json
-      }
-      }
-      }
+            
