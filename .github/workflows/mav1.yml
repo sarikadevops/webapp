@@ -58,12 +58,8 @@ jobs:
       env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
        # Step that deploy to dev env
-    - name: deploy to dev
-    deployment:
-     runs-on: ubuntu-latest
-     environment: staging
-     steps:
-      - name: deploy to staging
+      - name: dev
+        url: https//:github.com
         # ...deployment-specific steps
       
        # Step that deploy to beta env
