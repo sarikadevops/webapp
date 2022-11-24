@@ -42,4 +42,7 @@ jobs:
       # Step that builds the package
     - name: Build package
       run: mvn clean install  -Dmaven.test.skip=true
+      
+      # Step that sends messages to slack channel
+      # https://github.com/julioaranajr/GitHub-Actions-Example
 
