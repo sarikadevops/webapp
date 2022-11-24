@@ -76,10 +76,5 @@ jobs:
         # ...deployment-specific steps  
     
       # Step that deploy to live env
-     - name: deploy to live
-   deployment:
-     runs-on: ubuntu-latest
-     environment: live
-     steps:
       - name: deploy to live
-        # ...deployment-specific steps
+ 
