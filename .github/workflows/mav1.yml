@@ -18,7 +18,7 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-
+    environment: dev
     steps:
     - uses: actions/checkout@v3
     - name: Set up JDK 11
@@ -60,7 +60,7 @@ jobs:
        # Step that deploy to dev env
     - name: deploy to dev
       run: ubuntu-latest 
-      environment: dev
+      
       
     
     
