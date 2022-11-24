@@ -59,7 +59,7 @@ jobs:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
        # Step that deploy to dev env
     - name: deploy to dev
-      run: deploy
+    
       
       
     
