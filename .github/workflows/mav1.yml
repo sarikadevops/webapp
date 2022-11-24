@@ -58,9 +58,17 @@ jobs:
       env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
           
-    deployment:
-    environment: dev
-    concurrency: dev
-    step: Deploy to dev env
-      - name: deploy
+    - name: Deployment
+
+      on:
+       push:
+        branches:
+         - main
+
+         deployment:
+           runs-on: ubuntu-latest
+           environment: production
+           concurrency: production
+           steps:
+    - name: deploy
         # ...deployment-specific steps
